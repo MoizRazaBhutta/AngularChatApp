@@ -1,0 +1,12 @@
+<h1>Live Chat</h1>
+
+<p>There are currently {{ users }} users online</p>
+<h1>Messages:</h1>
+<p *ngFor="let message of messages">
+  {{ message }}
+</p>
+
+<form>
+  <textarea type="text" [(ngModel)]="message" name="message"></textarea>
+  <button (click)="addChat()">Send</button>
+</form>
